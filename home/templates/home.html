@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class='box'>
+    <form class="" method="get">
+        <input class="form-control" name="city">
+        <button class="" type="submit">Submit</button>
+    </form>
+    <!-- <div class='wave -one'></div> -->
+    <!-- <div class='wave -two'></div> -->
+    <div class='wave -three'></div>
+    <div class="weathercon" :style="backgroundImage: http://openweather.org/img/wn/{{data.icon}}.png "><i class='fas fa-sun' style='color: #d36326, ' ></i></div>
+    <div class="info">
+      <h2 class="location">{{data.city}}</h2><br>
+      <h2 class="location">{{data.description}}</h2>
+      <h1 class="temp">{{data.celcius_temperature}}&deg;C | {{data.kelvin_temperature}}&deg;K</h1>
+    </div>
+  </div>
+ 
+
+{%endblock%}
